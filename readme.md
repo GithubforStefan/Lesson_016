@@ -1,16 +1,12 @@
-#entities:
+# entities: 
 - track
+    - id
     - name
     - duration
     - artist
     - year
-    - counter (mutable)
-    
-    
- 
 - artist
     - name
-
 - user
     - name
     - playlists
@@ -43,7 +39,9 @@
         - track
     - get top artist for user
     - get favourite track for user
-    - get 
+    - get top fan for artist
+    - get number of distinct streamers for artist
+    - get total number of streams
        
     
        
