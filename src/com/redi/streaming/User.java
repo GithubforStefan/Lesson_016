@@ -1,4 +1,4 @@
-import com.redi.streaming.*;
+package com.redi.streaming;
 
 import java.util.*;
 
