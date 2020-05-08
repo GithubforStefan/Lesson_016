@@ -1,4 +1,4 @@
-import com.redi.streaming.*;
+package com.redi.streaming;
 
 import java.util.*;
 
@@ -11,6 +11,18 @@ public class User {
         this.id = id;
         this.name = name;
         this.playlists = playlists;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Playlist> getPlaylists() {
+        return playlists;
     }
 
     @Override
