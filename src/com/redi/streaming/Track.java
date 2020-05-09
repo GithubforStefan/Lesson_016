@@ -2,23 +2,22 @@ package com.redi.streaming;
 
 import java.time.Duration;
 import java.time.Year;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
 public class Track {
     private final UUID id;
     private final String name;
     private final Duration duration;
-    private final Artist artist;
+    private final String artistName;
     private final Year year;
 
 
 
-    public Track(UUID id, String name, Duration duration, Artist artistName, Year year) {
+    public Track(UUID id, String name, Duration duration, String artistName, Year year) {
         this.id = id;
         this.name = name;
         this.duration = duration;
-        this.artist = artistName;
+        this.artistName = artistName;
         this.year = year;
 
     }
@@ -34,13 +33,13 @@ public class Track {
         return Objects.equals(id, track.id) &&
                 Objects.equals(name, track.name) &&
                 Objects.equals(duration, track.duration) &&
-                Objects.equals(artist, track.artist) &&
+                Objects.equals(artistName, track.artistName) &&
                 Objects.equals(year, track.year);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, duration, artist, year);
+        return Objects.hash(id, name, duration, artistName, year);
     }
 
     public UUID getId() {
@@ -55,9 +54,9 @@ public class Track {
         return duration;
     }
 
-    public Artist getArtist() {
+    public String getArtistName() {
 
-        return artist;
+        return artistName;
     }
 
     public Year getYear() {
@@ -65,11 +64,11 @@ public class Track {
     }
     public void getTrack(){
         System.out.println("Track ID: " + this.getId());
-        System.out.println("Title : " + this.getName());
-        System.out.println("Artist: " + this.getArtist());
+        System.out.println("Title: " + this.getName());
+        System.out.println("Artist: " + this.getArtistName());
         System.out.println("Duration in minutes: " + this.getDuration().toMinutes());
-        System.out.println("Year :" + this.getYear());
-        System.out.println("HashCode : " + this.hashCode());
+        System.out.println("Year: " + this.getYear());
+        System.out.println("HashCode: " + this.hashCode());
         System.out.println("-----------------------");
         return ;
     }

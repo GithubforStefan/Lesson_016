@@ -1,8 +1,7 @@
 package com.redi.streaming;
 
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.UUID;
+
+import java.util.*;
 
 
 public class User {
@@ -15,7 +14,6 @@ public class User {
         this.name = name;
         //this.playlists = playlists;
     }
-
 
 
 

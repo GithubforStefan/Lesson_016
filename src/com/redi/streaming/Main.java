@@ -18,7 +18,7 @@ public class Main {
         Artist reDiChoir = new Artist(UUID.randomUUID(),"ReDi Choir");
 
 
-        Track oSoleMio = new Track(UUID.randomUUID(),"O sole mio", Duration.ofSeconds(350),caruso, Year.of(1904));
+        Track oSoleMio = new Track(UUID.randomUUID(),"O sole mio", Duration.ofSeconds(350),"Enrico Caruso", Year.of(1904));
         oSoleMio.getTrack();
 
         ArrayList<Track> songsPerUser = null;
@@ -27,17 +27,22 @@ public class Main {
 
 
 
-        Track vaPensiero = new Track(UUID.randomUUID(),"Va, pensiero", Duration.ofSeconds(600),reDiChoir, Year.of(2020));
+        Track vaPensiero = new Track(UUID.randomUUID(),"Va, pensiero", Duration.ofSeconds(600),"ReDi Choir", Year.of(2020));
         vaPensiero.getTrack();
         newPlaylist.setSongsPerUser();
         ArrayList<Playlist> playListUser2 = new ArrayList<>();
         System.out.println(newPlaylist);
-        User stefan = new User(UUID.randomUUID(), "Stefan");
+
+        User stefan = new User(UUID.randomUUID(),"Stefan");
+        User user1 = new User(UUID.randomUUID(), "user1");
+        User user2 = new User(UUID.randomUUID(), "user2");
 
 
         StreamingService player = new StreamingService();
-        StreamingService.play(oSoleMio,stefan);
-        StreamingService.play(vaPensiero,stefan);
+        StreamingService.play(oSoleMio,user1);
+        StreamingService.play(vaPensiero,user1);
+        StreamingService.play(oSoleMio,user2);
+        StreamingService.play(vaPensiero,user2);
 
 
 

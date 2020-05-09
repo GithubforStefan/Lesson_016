@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Artist {
     private final UUID id;
-    public String artistName;
+    private String artistName;
 
     public Artist(UUID id, String artistName) {
         this.id = id;
@@ -17,8 +17,6 @@ public class Artist {
     }
 
     public String getArtistName() {
-
-
 
         return artistName;
     }
