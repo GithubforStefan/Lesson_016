@@ -1,17 +1,19 @@
 package com.redi.streaming;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.UUID;
 
 
 public class User {
     private UUID id;
     private String name;
-    private ArrayList<Playlist>playlists;
+    //private ArrayList<Playlist>playlists;
 
-    public User(UUID id, String name, ArrayList<Playlist> playlists) {
+    public User(UUID id, String name) {
         this.id = id;
         this.name = name;
-        this.playlists = playlists;
+        //this.playlists = playlists;
     }
 
 
@@ -25,9 +27,9 @@ public class User {
         return name;
     }
 
-    public ArrayList<Playlist> getPlaylists() {
+  /*  public ArrayList<Playlist> getPlaylists() {
         return playlists;
-    }
+    }*/
 
     public void setId(UUID id) {
         this.id = id;
@@ -37,9 +39,9 @@ public class User {
         this.name = name;
     }
 
-    public void setPlaylists(ArrayList<Playlist> playlists) {
+   /* public void setPlaylists(ArrayList<Playlist> playlists) {
         this.playlists = playlists;
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {
@@ -47,12 +49,13 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return Objects.equals(id, user.id) &&
-                Objects.equals(name, user.name) &&
-                Objects.equals(playlists, user.playlists);
+                Objects.equals(name, user.name) //&&
+                //Objects.equals(playlists, user.playlists)
+        ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, playlists);
+        return Objects.hash(id, name );
     }
 }

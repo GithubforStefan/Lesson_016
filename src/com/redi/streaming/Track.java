@@ -1,22 +1,24 @@
 package com.redi.streaming;
 
-import java.time.*;
-import java.util.*;
+import java.time.Duration;
+import java.time.Year;
+import java.util.Objects;
+import java.util.UUID;
 
 public class Track {
     private final UUID id;
     private final String name;
     private final Duration duration;
-    private final String artist;
+    private final Artist artist;
     private final Year year;
-    private Artist ;
 
 
-    public Track(UUID id, String name, Duration duration, String artist, Year year) {
+
+    public Track(UUID id, String name, Duration duration, Artist artistName, Year year) {
         this.id = id;
         this.name = name;
         this.duration = duration;
-        this.artist = artist;
+        this.artist = artistName;
         this.year = year;
 
     }
@@ -53,9 +55,9 @@ public class Track {
         return duration;
     }
 
-    public String getArtist() {
+    public Artist getArtist() {
 
-        return new Artist(UUID.randomUUID(),"name");
+        return artist;
     }
 
     public Year getYear() {

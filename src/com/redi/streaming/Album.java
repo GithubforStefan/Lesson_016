@@ -1,7 +1,8 @@
 package com.redi.streaming;
 
-import java.time.*;
-import java.util.*;
+import java.time.Year;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class Album {
     private final String title;

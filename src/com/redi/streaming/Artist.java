@@ -1,22 +1,26 @@
 package com.redi.streaming;
 
-import java.util.*;
+import java.util.Objects;
+import java.util.UUID;
 
 public class Artist {
     private final UUID id;
-    private final String name;
+    public String artistName;
 
-    public Artist(UUID id, String name) {
+    public Artist(UUID id, String artistName) {
         this.id = id;
-        this.name = name;
+        this.artistName = artistName;
     }
 
     public UUID getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getArtistName() {
+
+
+
+        return artistName;
     }
 
     @Override
@@ -25,11 +29,11 @@ public class Artist {
         if (o == null || getClass() != o.getClass()) return false;
         Artist artist = (Artist) o;
         return Objects.equals(id, artist.id) &&
-                Objects.equals(name, artist.name);
+                Objects.equals(artistName, artist.artistName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, artistName);
     }
 }

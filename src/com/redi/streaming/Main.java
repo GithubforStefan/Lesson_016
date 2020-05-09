@@ -1,8 +1,10 @@
 package com.redi.streaming;
 
 
-import java.time.*;
-import java.util.*;
+import java.time.Duration;
+import java.time.Year;
+import java.util.ArrayList;
+import java.util.UUID;
 
 
 
@@ -30,8 +32,15 @@ public class Main {
         newPlaylist.setSongsPerUser();
         ArrayList<Playlist> playListUser2 = new ArrayList<>();
         System.out.println(newPlaylist);
+        User stefan = new User(UUID.randomUUID(), "Stefan");
 
-        User newUser = new User(UUID.randomUUID(), "User2", playListUser2);
+
+        StreamingService player = new StreamingService();
+        StreamingService.play(oSoleMio,stefan);
+        StreamingService.play(vaPensiero,stefan);
+
+
+
 
 
 

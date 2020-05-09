@@ -1,6 +1,8 @@
 package com.redi.streaming;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.UUID;
 
 public class Playlist {
     private final UUID id;
