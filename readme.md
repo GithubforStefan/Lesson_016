@@ -12,8 +12,9 @@
     - playlists
     
 - playlist
+    - id
     - name
-    - tracklist
+    (- tracklist)
 - album
     - title
     - year

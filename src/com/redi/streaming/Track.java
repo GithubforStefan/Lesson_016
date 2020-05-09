@@ -9,7 +9,7 @@ public class Track {
     private final Duration duration;
     private final String artist;
     private final Year year;
-
+    private Artist ;
 
 
     public Track(UUID id, String name, Duration duration, String artist, Year year) {
@@ -19,10 +19,10 @@ public class Track {
         this.artist = artist;
         this.year = year;
 
-
-
-
     }
+
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -54,11 +54,22 @@ public class Track {
     }
 
     public String getArtist() {
-        return artist;
+
+        return new Artist(UUID.randomUUID(),"name");
     }
 
     public Year getYear() {
         return year;
+    }
+    public void getTrack(){
+        System.out.println("Track ID: " + this.getId());
+        System.out.println("Title : " + this.getName());
+        System.out.println("Artist: " + this.getArtist());
+        System.out.println("Duration in minutes: " + this.getDuration().toMinutes());
+        System.out.println("Year :" + this.getYear());
+        System.out.println("HashCode : " + this.hashCode());
+        System.out.println("-----------------------");
+        return ;
     }
 
 }

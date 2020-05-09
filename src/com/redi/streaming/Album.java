@@ -6,13 +6,21 @@ import java.util.*;
 public class Album {
     private final String title;
     private final Year year;
-    private final ArrayList<Track>tracklists;
 
-    public Album(String title, Year year, ArrayList<Track> tracklists) {
+    public static ArrayList<Track>songs;
+
+
+    public Album(String title, Year year, ArrayList<Track> tracklist) {
         this.title = title;
         this.year = year;
-        this.tracklists = tracklists;
+        this.songs = tracklist;
+
+
+
     }
+
+
+    Album bestOfItalianOpera = new Album("Best of Italian Opera", Year.of(2019), songs );
 
     public String getTitle() {
         return title;
@@ -22,9 +30,11 @@ public class Album {
         return year;
     }
 
-    public ArrayList<Track> getTracklists() {
-        return tracklists;
+    public ArrayList<Track> getTracklist() {
+
+        return songs;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -33,11 +43,13 @@ public class Album {
         Album album = (Album) o;
         return Objects.equals(title, album.title) &&
                 Objects.equals(year, album.year) &&
-                Objects.equals(tracklists, album.tracklists);
+                Objects.equals(songs, album.songs);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, year, tracklists);
+        return Objects.hash(title, year, songs);
     }
+
+
 }

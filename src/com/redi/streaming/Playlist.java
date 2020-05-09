@@ -5,12 +5,42 @@ import java.util.*;
 public class Playlist {
     private final UUID id;
     private final String name;
-    private final ArrayList<Track> tracklist;
+    public ArrayList<Track> songsPerUser;
 
-    public Playlist(UUID id, String name, ArrayList<Track> tracklist) {
+
+
+    public Playlist(UUID id, String name,ArrayList<Track> songsPerUser) {
         this.id = id;
         this.name = name;
-        this.tracklist = tracklist;
+        this.songsPerUser = songsPerUser;
+
+
+
+
+    }
+
+
+
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Track> getsongsPerUser() {
+        return songsPerUser;
+    }
+
+    public void setSongsPerUser() {
+        this.songsPerUser = songsPerUser;
+    }
+
+    public Playlist(UUID id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     @Override
@@ -20,11 +50,11 @@ public class Playlist {
         Playlist playlist = (Playlist) o;
         return Objects.equals(id, playlist.id) &&
                 Objects.equals(name, playlist.name) &&
-                Objects.equals(tracklist, playlist.tracklist);
+                Objects.equals(songsPerUser, playlist.songsPerUser);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, tracklist);
+        return Objects.hash(id, name, songsPerUser);
     }
 }
