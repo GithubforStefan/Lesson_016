@@ -15,7 +15,7 @@ public class StreamingService {
 
     public static void play(Track track, User user){
         numberOfStreamsPlayed ++;
-        System.out.println(numberOfStreamsPlayed);
+        System.out.println("Number of streams played: " + numberOfStreamsPlayed);
 
     }
 
